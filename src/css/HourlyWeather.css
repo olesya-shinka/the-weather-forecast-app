@@ -1,0 +1,54 @@
+.hourly-weather-items {
+  border-left: 1px solid var(--bdrColor);
+}
+
+
+.hourly-weather-items:nth-of-type(1) {
+  border-left: 0px solid var(--bdrColor);
+}
+
+.hourly-weather-items>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 10em;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.hourly-weather-items>div>p:nth-of-type(1) {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--tempColor);
+}
+
+.hourly-weather-items>div>p:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hourly-weather-items>div>p:nth-of-type(3) {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--subHeadingColor);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.hourly-weather-items>div>p:nth-of-type(2) img {
+  width: 35%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hourly-weather-items>div {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .summary>li:nth-child(odd) {
+    border-left: none;
+  }
+}
