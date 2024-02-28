@@ -41,3 +41,30 @@
     transform: rotate(360deg);
   }
 }
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 915px;
+  background: linear-gradient(45deg, #9141e9 0%, #6f3887 50%);
+  gap: 2vh;
+  color: aliceblue;
+}
+
+.not-found-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(106.23deg, #b369e0, #531f68 100%);
+  border-radius: 5px;
+  padding: 8px;
+  transition: all 0.5s ease;
+  color: aliceblue;
+}
+
+.not-found-btn:hover {
+  transform: scale(1.1);
+}
