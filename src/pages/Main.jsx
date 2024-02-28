@@ -13,7 +13,7 @@ import TitleApp from "../Components/Styles/TitleApp";
 import Forecast from "../Components/Foreсast";
 
 function Main() {
-  const API_KEY = "3352fcd37ab6257f7e760829d605bf42";
+  const API_KEY = "3352fcd37ab6257f7e760829d605bf42"; 
   const [searchTerm, setSearchTerm] = useState("");
   const [weatherData, setWeatherData] = useState([]);
   const [city, setCity] = useState();
@@ -30,6 +30,10 @@ function Main() {
     [isFahrenheitMode]
   );
   const [isDark, setIsDark] = useState(false);
+
+  if (!API_KEY) {
+    alert("Что-то пошло не так");
+  }
 
   useEffect(() => {
     if (isDark) {
@@ -64,7 +68,6 @@ function Main() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     // Обрезаем пробелы из поискового запроса и проверяем, пусто ли оно
     const trimmedSearchTerm = searchTerm.trim();
     if (trimmedSearchTerm === "") {
@@ -224,10 +227,7 @@ function Main() {
                     </>
                   ) : (
                     <>
-                      <img
-                        src={SearchPlace}
-                        alt="a person thinking about what place to find"
-                      />
+                      <img src={SearchPlace} alt="place" />
                       <p style={{ padding: "20px" }}>
                         Looking for weather information? <br /> Just type your
                         location here.
