@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import { useMemo } from "react";
 import moment from "moment";
-import "../css/Forecast.css";
+import "../css/ForeCast.css";
 import convertDegrees from "../service/convertDegrees";
 
 const Forecast = ({
